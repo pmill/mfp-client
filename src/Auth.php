@@ -63,6 +63,10 @@ class Auth
      */
     public function getUserId()
     {
+        if (is_null($this->userId)) {
+            $this->login();
+        }
+
         return $this->userId;
     }
 
@@ -71,6 +75,10 @@ class Auth
      */
     public function getJwt()
     {
+        if (is_null($this->jwt)) {
+            $this->login();
+        }
+
         return $this->jwt;
     }
 

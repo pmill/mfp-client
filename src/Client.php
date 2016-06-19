@@ -37,8 +37,6 @@ class Client
      */
     public function getCurrentWeight()
     {
-        $this->authHelper->login();
-
         $response = $this->httpClient->request('GET', 'https://api.myfitnesspal.com/v2/incubator/measurements?most_recent=true&type=weight', [
             'headers' => [
                 'Accept' => 'application/json',
