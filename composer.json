@@ -1,0 +1,23 @@
+{
+  "name": "pmill/mfp-client",
+  "description": "A PHP client for MFP API",
+  "keywords": ["php", "api", "mfp"],
+  "homepage": "https://github.com/pmill/mfp-api",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "pmill",
+      "email": "dev.pmill@gmail.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^6.2",
+    "symfony/dom-crawler": "^3.1",
+    "symfony/css-selector": "^3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "pmill\\MFP\\": "src/"
+    }
+  }
+}
