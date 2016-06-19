@@ -40,7 +40,7 @@ class Client
         $response = $this->httpClient->request('GET', 'https://api.myfitnesspal.com/v2/incubator/measurements?most_recent=true&type=weight', [
             'headers' => [
                 'Accept' => 'application/json',
-                'Authorization' => 'Bearer '.$this->authHelper->getJwt(),
+                'Authorization' => 'Bearer '.$this->authHelper->getAuthToken(),
                 'mfp-client-id' => 'mfp-main-js',
                 'mfp-user-id' => $this->authHelper->getUserId(),
             ],

@@ -28,7 +28,7 @@ class Auth
     /**
      * @var string
      */
-    protected $jwt;
+    protected $authToken;
 
     /**
      * @throws \Exception
@@ -46,7 +46,7 @@ class Auth
         $body = $response->getBody()->getContents();
 
         $this->userId = $this->fetchUserId($body);
-        $this->jwt = $this->fetchAccessToken();
+        $this->authToken = $this->fetchAuthToken();
     }
 
     /**
@@ -73,13 +73,13 @@ class Auth
     /**
      * @return string
      */
-    public function getJwt()
+    public function getAuthToken()
     {
-        if (is_null($this->jwt)) {
+        if (is_null($this->authToken)) {
             $this->login();
         }
 
-        return $this->jwt;
+        return $this->authToken;
     }
 
     /**
@@ -123,7 +123,7 @@ class Auth
      * @return string
      * @throws \Exception
      */
-    protected function fetchAccessToken()
+    protected function fetchAuthToken()
     {
         $response = $this->httpClient->request('GET', 'https://www.myfitnesspal.com/user/auth_token?refresh-true');
         $body = $response->getBody()->getContents();
