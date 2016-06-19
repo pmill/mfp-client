@@ -1,7 +1,7 @@
 {
   "name": "pmill/mfp-client",
   "description": "A PHP client for MyFitnessPal",
-  "keywords": ["php", "api", "mfp"],
+  "keywords": ["php", "api", "mfp", "myfitnesspal", "client"],
   "homepage": "https://github.com/pmill/mfp-client",
   "license": "MIT",
   "authors": [
