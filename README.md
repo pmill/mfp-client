@@ -26,7 +26,7 @@ A more detail example is available in the examples directory.
 Version History
 ---------------
 
-0.1.0 (08/10/2014)
+0.1.0 (20/06/2016)
 
 *   Get current weight
 *   Get historical weight
