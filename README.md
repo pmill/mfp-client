@@ -1,5 +1,5 @@
-PHP MyFitnessPal API
-====================
+PHP MyFitnessPal Client
+=======================
 
 Introduction
 ------------
